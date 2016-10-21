@@ -1,0 +1,9 @@
+= simple_form_for @post do |f|
+  = f.input :title
+  = f.input :body
+
+  =f.submit 'Save'
+
+%br
+
+= link_to 'Back', posts_path

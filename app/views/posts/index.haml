@@ -1,0 +1,9 @@
+- @posts.each do |post|
+  %ul
+    %li= link_to post.title, post
+    %li= post.body
+
+%br
+
+= link_to 'New', new_post_path
+
