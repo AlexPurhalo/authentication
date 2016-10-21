@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
+  before_action :require_user, only: [:index, :show]
 
   def index
     @posts = Post.order("created_at DESC")
